@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100d18">
+<title>Arifa's CineBook | Online Movie Ticket Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">A</span><span>CINE<span class="gold">BOOK</span><small>BY ARIFA</small></span></a>
+<nav><a href="#movies">Movies</a><a href="#shows">Show timings</a><a href="#booking">Book tickets</a></nav><a class="outline" href="#movies">Explore movies ↗</a></header>
+<main>
+<section class="hero"><div><p class="eyebrow">✦ &nbsp; YOUR NIGHT. YOUR MOVIE. YOUR SEAT.</p>
+<h1>Every great story<br>starts with <em>a ticket.</em></h1>
+<p class="lead">Discover the latest movies, choose your showtime, and make your next cinema moment unforgettable.</p>
+<a class="gold-button" href="#movies">Browse movies <b>→</b></a><p class="rating">★★★★★ &nbsp; A little magic, one booking away.</p></div>
+<div class="poster-stage"><div class="poster-back">ADMIT<br><b>ONE</b></div><div class="poster"><small>✦ CINEBOOK PRESENTS</small><span>YOUR NEXT ESCAPE</span><strong>THE<br>BIG<br>SCREEN</strong><small class="poster-foot">GOOD TIMES AHEAD &nbsp; ✦ ✦ ✦</small></div><div class="spark">✦</div><label>THE MAGIC OF MOVIES</label></div></section>
+<section class="steps"><div><b>01</b> Pick a movie</div><i></i><div><b>02</b> Choose a show</div><i></i><div><b>03</b> Book your seats</div></section>
+<section class="section" id="movies"><div class="heading"><div><p class="eyebrow">NOW SHOWING</p><h2>Find your <em>next favourite.</em></h2></div><small>THE SCREEN IS YOURS</small></div><div id="movieGrid" class="movie-grid"><p class="loading">Loading movies…</p></div></section>
+<section class="section" id="shows"><div class="heading"><div><p class="eyebrow">THE SHOW MUST GO ON</p><h2>Upcoming <em>showtimes.</em></h2></div><small>PICK YOUR PERFECT TIME</small></div><div id="showList" class="show-list"><p class="loading">Loading showtimes…</p></div></section>
+<section class="booking" id="booking"><div class="booking-copy"><p class="eyebrow">SAVE YOUR SEATS</p><h2>Make it a <em>movie night.</em></h2><p>Fill in your details, select a show and reserve your tickets. Your cinema plan is just a few clicks away.</p><div class="big-star">✦</div></div>
+<form id="bookingForm"><div class="form-head"><b>01 / YOUR DETAILS</b><span>● QUICK BOOKING</span></div>
+<label>Full name<input name="full_name" placeholder="Enter your name" required maxlength="100"></label>
+<div class="form-row"><label>Email address<input name="email" type="email" placeholder="you@example.com" required></label><label>Phone (optional)<input name="phone" placeholder="Phone number"></label></div>
+<label>Select show<select name="show_id" id="showSelect" required><option value="">Choose a movie and showtime</option></select></label>
+<label>Number of tickets<select name="seats" id="seatCount"><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option><option value="4">4 tickets</option><option value="5">5 tickets</option><option value="6">6 tickets</option><option value="7">7 tickets</option><option value="8">8 tickets</option><option value="9">9 tickets</option><option value="10">10 tickets</option></select></label>
+<div class="total"><span>Estimated total</span><b id="totalAmount">₹0.00</b></div><button class="gold-button full" type="submit">Confirm booking <b>→</b></button>
+<p id="formMessage" class="message" role="status"></p><small class="fine">Demo project: bookings are saved in your local MySQL database.</small></form></section>
+<section class="section records"><div class="heading"><div><p class="eyebrow">YOUR RESERVATIONS</p><h2>Recent <em>bookings.</em></h2></div><button id="refreshBookings" class="outline refresh">↻ Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>BOOKING</th><th>CUSTOMER</th><th>MOVIE</th><th>SHOW</th><th>TICKETS</th><th>TOTAL</th><th>STATUS</th></tr></thead><tbody id="bookingRows"><tr><td colspan="7">No bookings loaded yet.</td></tr></tbody></table></div></section>
+</main><footer><a class="brand" href="#"><span class="brand-icon">A</span><span>CINE<span class="gold">BOOK</span><small>BY ARIFA</small></span></a><p>Made for movie lovers. Designed by Arifa.</p><small>© 2026 ARIFA CINEBOOK</small></footer>
+<script src="app.js"></script></body></html>
