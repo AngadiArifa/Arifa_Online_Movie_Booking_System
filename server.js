@@ -36,7 +36,10 @@ app.get("/api/health", async (_req, res) => {
 
 app.get("/api/movies", async (_req, res) => {
   try { const [rows] = await pool.query("SELECT * FROM movies ORDER BY movie_id DESC"); res.json(rows); }
-  catch { res.status(500).json({message:"Could not load movies."}); }
+  catch (e) {
+  console.error("Movies API error:", e);
+  res.status(500).json({message: e.message});
+}
 });
 
 app.get("/api/shows", async (req, res) => {
